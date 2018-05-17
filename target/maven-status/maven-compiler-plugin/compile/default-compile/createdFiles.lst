@@ -1,0 +1,9 @@
+org\abcd\examples\ArrayInit\gen\ArrayInitBaseVisitor.class
+org\abcd\examples\ArrayInit\gen\ArrayInitBaseListener.class
+org\abcd\examples\ArrayInit\gen\ArrayInitParser.class
+org\abcd\examples\ArrayInit\gen\ArrayInitLexer.class
+org\abcd\examples\ArrayInit\ArrayInit.class
+org\abcd\examples\ArrayInit\gen\ArrayInitParser$InitContext.class
+org\abcd\examples\ArrayInit\gen\ArrayInitVisitor.class
+org\abcd\examples\ArrayInit\gen\ArrayInitListener.class
+org\abcd\examples\ArrayInit\gen\ArrayInitParser$ValueContext.class
