@@ -5,11 +5,13 @@ import org.abcd.examples.ArrayInit.gen.ArrayInitParser;
 import org.abcd.examples.ArrayInit.gen.ArrayInitVisitor;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+import java.io.*;
 
 public class ArrayInit {
     public static void main(String[] args) throws Exception {
         // create a CharStream that reads from standard input
-        ANTLRInputStream input = new ANTLRInputStream("{1,2,3}");
+        ANTLRInputStream input = new ANTLRInputStream(
+                new FileInputStream("txt_files/input.txt"));
 
         // create a lexer that feeds off of input CharStream
         ArrayInitLexer lexer = new ArrayInitLexer(input);
@@ -21,6 +23,9 @@ public class ArrayInit {
         ArrayInitParser parser = new ArrayInitParser(tokens);
 
         ParseTree tree = parser.init(); // begin parsing at init rule
-        System.out.println(tree.toStringTree(parser)); // print LISP-style tree
+        FileWriter writer = new FileWriter("txt_files/output.txt", false);
+        writer.write(tree.toStringTree(parser));
+        writer.close();
+//        System.out.println(tree.toStringTree(parser)); // print LISP-style tree
     }
 }

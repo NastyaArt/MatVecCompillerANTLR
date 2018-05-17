@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MatVecCompiler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MatVecCompiler_jar</output-path>
+    <root id="archive" name="MatVecCompiler.jar">
+      <element id="module-output" name="MatVecCompiler" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Programs/ANTLR/intellij-plugin-v4/lib/intellij-plugin-v4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Programs/ANTLR/intellij-plugin-v4/lib/antlr-4.7-intellij-1.8.4-version-complete.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Programs/junit.jar/junit.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
