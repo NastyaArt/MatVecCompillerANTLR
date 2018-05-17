@@ -1,4 +1,4 @@
-package org.abcd.examples.ArrayInit;
+package main.java.org.abcd.examples.ArrayInit;
 
 import org.abcd.examples.ArrayInit.gen.ArrayInitLexer;
 import org.abcd.examples.ArrayInit.gen.ArrayInitParser;
@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.tree.*;
 public class ArrayInit {
     public static void main(String[] args) throws Exception {
         // create a CharStream that reads from standard input
-        ANTLRInputStream input = new ANTLRInputStream(System.in);
+        ANTLRInputStream input = new ANTLRInputStream("{1,2,3}");
 
         // create a lexer that feeds off of input CharStream
         ArrayInitLexer lexer = new ArrayInitLexer(input);

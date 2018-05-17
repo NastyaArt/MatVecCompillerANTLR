@@ -1,4 +1,4 @@
-package org.abcd.examples.ArrayInit;
+package test.java.org.abcd.examples.ArrayInit;
 
 import static org.junit.Assert.assertTrue;
 
