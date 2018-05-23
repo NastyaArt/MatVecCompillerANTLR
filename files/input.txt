@@ -1,28 +1,4 @@
-program {
-matrix a = {{1,1,1},{1,1,1}};
-matrix b = {{1,0,1},{2,3,4}};
-matrix c = calc(a,b);
-c.show();
+main {
+vector f = {1,2,3};
 
-vectr();
-}
-
-func matrix calc(matrix matr1, matrix matr2){
-matrix matr;
-if(matr2.get(1,1) > 2){
-matr = matr1 + matr2;
-}
-else{
-matr = matr1 * 2;
-}
-return matr;
-}
-
-func vectr(){
-vector vect;
-while(vect.length() != 5){
-vect.add(1);
-}
-vect.show();
-return;
 }

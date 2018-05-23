@@ -99,13 +99,13 @@ public class GrammarBaseListener implements GrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterShowFunc(GrammarParser.ShowFuncContext ctx) { }
+	@Override public void enterPrintFunc(GrammarParser.PrintFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitShowFunc(GrammarParser.ShowFuncContext ctx) { }
+	@Override public void exitPrintFunc(GrammarParser.PrintFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -130,6 +130,30 @@ public class GrammarBaseListener implements GrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLengthFunc(GrammarParser.LengthFuncContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNcolFunc(GrammarParser.NcolFuncContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNcolFunc(GrammarParser.NcolFuncContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNrowFunc(GrammarParser.NrowFuncContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNrowFunc(GrammarParser.NrowFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

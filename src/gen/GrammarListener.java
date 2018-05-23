@@ -77,15 +77,15 @@ public interface GrammarListener extends ParseTreeListener {
 	 */
 	void exitAssignment(GrammarParser.AssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GrammarParser#showFunc}.
+	 * Enter a parse tree produced by {@link GrammarParser#printFunc}.
 	 * @param ctx the parse tree
 	 */
-	void enterShowFunc(GrammarParser.ShowFuncContext ctx);
+	void enterPrintFunc(GrammarParser.PrintFuncContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GrammarParser#showFunc}.
+	 * Exit a parse tree produced by {@link GrammarParser#printFunc}.
 	 * @param ctx the parse tree
 	 */
-	void exitShowFunc(GrammarParser.ShowFuncContext ctx);
+	void exitPrintFunc(GrammarParser.PrintFuncContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GrammarParser#getFunc}.
 	 * @param ctx the parse tree
@@ -106,6 +106,26 @@ public interface GrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLengthFunc(GrammarParser.LengthFuncContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GrammarParser#ncolFunc}.
+	 * @param ctx the parse tree
+	 */
+	void enterNcolFunc(GrammarParser.NcolFuncContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#ncolFunc}.
+	 * @param ctx the parse tree
+	 */
+	void exitNcolFunc(GrammarParser.NcolFuncContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GrammarParser#nrowFunc}.
+	 * @param ctx the parse tree
+	 */
+	void enterNrowFunc(GrammarParser.NrowFuncContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#nrowFunc}.
+	 * @param ctx the parse tree
+	 */
+	void exitNrowFunc(GrammarParser.NrowFuncContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GrammarParser#addFunc}.
 	 * @param ctx the parse tree

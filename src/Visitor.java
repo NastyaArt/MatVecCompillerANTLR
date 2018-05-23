@@ -154,7 +154,7 @@ public class Visitor extends GrammarBaseVisitor<String> {
     }
 
     @Override
-    public String visitShowFunc(GrammarParser.ShowFuncContext ctx) {
+    public String visitPrintFunc(GrammarParser.PrintFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -173,6 +173,36 @@ public class Visitor extends GrammarBaseVisitor<String> {
     public String visitLengthFunc(GrammarParser.LengthFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
+        }
+        if (!variables.get(ctx.NAME().getText()).equals("vector")) {
+            errors.add(ctx.NAME().getText() + " is not a vector");
+            return "";
+        }
+        return ctx.getText();
+    }
+
+    @Override
+    public String visitNcolFunc(GrammarParser.NcolFuncContext ctx) {
+        errors.add(ctx.NAME().getText());
+        errors.add(variables.get(ctx.NAME().getText()));
+        if (variables.get(ctx.NAME().getText()) == null) {
+            errors.add("Can't find variable " + ctx.NAME().getText());
+        }
+        if (!variables.get(ctx.NAME().getText()).equals("matrix")) {
+            errors.add(ctx.NAME().getText() + " is not a matrix");
+            return "";
+        }
+        return ctx.getText();
+    }
+
+    @Override
+    public String visitNrowFunc(GrammarParser.NrowFuncContext ctx) {
+        if (variables.get(ctx.NAME().getText()) == null) {
+            errors.add("Can't find variable " + ctx.NAME().getText());
+        }
+        if (!variables.get(ctx.NAME().getText()).equals("matrix")) {
+            errors.add(ctx.NAME().getText() + " is not a matrix");
+            return "";
         }
         return ctx.getText();
     }
@@ -399,8 +429,8 @@ public class Visitor extends GrammarBaseVisitor<String> {
             return visitIfBlock(ctx.ifBlock());
         else if (ctx.assignment() != null)
             return visitAssignment(ctx.assignment());
-        else if (ctx.showFunc() != null)
-            return visitShowFunc(ctx.showFunc());
+        else if (ctx.printFunc() != null)
+            return visitPrintFunc(ctx.printFunc());
         else if (ctx.addFunc() != null)
             return visitAddFunc(ctx.addFunc());
         else if (ctx.removeFunc() != null)
@@ -413,6 +443,7 @@ public class Visitor extends GrammarBaseVisitor<String> {
     String result = "import java.util.ArrayList;\n" +
             "import java.util.Collections;\n" +
             "import java.util.List;\n" +
+            "import java.util.Arrays;\n" +
             "public class Result {\n" +
             "    public static void main(String[] args) {\n" +
             "        try {\n" +
@@ -449,7 +480,7 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "        array = arr;\n" +
             "    }\n" +
             "\n" +
-            "    public void show()\n" +
+            "    public void print()\n" +
             "    {\n" +
             "        for (int i = 0; i < rows; i++) {\n" +
             "            for (int j = 0; j < columns; j++)\n" +
@@ -533,7 +564,7 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "        array = arr;\n" +
             "    }\n" +
             "\n" +
-            "    public void show()\n" +
+            "    public void print()\n" +
             "    {\n" +
             "        for (int i = 0; i < array.size(); i++)\n" +
             "            System.out.print(array.get(i) + \" \");\n" +

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Arrays;
 public class Result {
     public static void main(String[] args) {
         try {
@@ -11,30 +12,7 @@ public class Result {
     }
     private void start() throws Exception
 {
-Matrix a = new Matrix(new int[][]{{1, 1, 1}, {1, 1, 1}});
-Matrix b = new Matrix(new int[][]{{1, 0, 1}, {2, 3, 4}});
-Matrix c = calc(a,b);
-c.show();
-vectr();
-}
-
-private Matrix calc(Matrix matr1, Matrix matr2)throws Exception{
-Matrix matr = new Matrix();
-if(matr2.get(1,1)>2){
-matr = matr1.plus(matr2);
-}else{
-matr = matr1.mult(2);
-}
-return matr;
-}
-
-private void vectr() throws Exception{
-Vector vect = new Vector();
-while(vect.length()!=5){
-vect.add(1);
-}
-vect.show();
-return;
+Vector f = new Vector(Arrays.asList(1, 2, 3));
 }
 
 public class Matrix {
@@ -63,7 +41,7 @@ public class Matrix {
         array = arr;
     }
 
-    public void show()
+    public void print()
     {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++)
@@ -147,7 +125,7 @@ public class Vector {
         array = arr;
     }
 
-    public void show()
+    public void print()
     {
         for (int i = 0; i < array.size(); i++)
             System.out.print(array.get(i) + " ");

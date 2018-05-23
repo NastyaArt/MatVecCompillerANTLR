@@ -22,7 +22,7 @@ public class Vector {
         array = arr;
     }
 
-    public void show()
+    public void print()
     {
         for (int i = 0; i < array.size(); i++)
             System.out.print(array.get(i) + " ");

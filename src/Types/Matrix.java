@@ -26,7 +26,7 @@ public class Matrix {
         array = arr;
     }
 
-    public void show()
+    public void print()
     {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++)
@@ -40,9 +40,14 @@ public class Matrix {
         return array[r][c];
     }
 
-    public int length()
+    public int nrow()
     {
-        return rows * columns;
+        return rows;
+    }
+
+    public int ncol()
+    {
+        return columns;
     }
 
     public Matrix plus(Matrix matr2)

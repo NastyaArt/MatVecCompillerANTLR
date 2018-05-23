@@ -52,11 +52,11 @@ public interface GrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssignment(GrammarParser.AssignmentContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrammarParser#showFunc}.
+	 * Visit a parse tree produced by {@link GrammarParser#printFunc}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitShowFunc(GrammarParser.ShowFuncContext ctx);
+	T visitPrintFunc(GrammarParser.PrintFuncContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GrammarParser#getFunc}.
 	 * @param ctx the parse tree
@@ -69,6 +69,18 @@ public interface GrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitLengthFunc(GrammarParser.LengthFuncContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrammarParser#ncolFunc}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNcolFunc(GrammarParser.NcolFuncContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrammarParser#nrowFunc}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNrowFunc(GrammarParser.NrowFuncContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GrammarParser#addFunc}.
 	 * @param ctx the parse tree
