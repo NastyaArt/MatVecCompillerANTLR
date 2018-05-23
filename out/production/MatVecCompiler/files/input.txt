@@ -1,0 +1,12 @@
+main{
+matrix a = {{1,1,1},{1,1,1}};
+matrix b = {{1,0,1},{2,3,4}};
+a.show();
+b.show();
+
+vector vect;
+while(vect.length() != 5){
+vect.add(1);
+}
+vect.show();
+}
