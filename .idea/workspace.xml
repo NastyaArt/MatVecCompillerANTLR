@@ -5,64 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/files/input.txt" afterPath="$PROJECT_DIR$/files/input.txt" />
       <change beforePath="$PROJECT_DIR$/java_out/Result.java" afterPath="$PROJECT_DIR$/java_out/Result.java" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Grammar.g4" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Grammar.g4" />
       <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Result$Matrix.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Result$Matrix.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Result$Vector.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Result$Vector.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Result.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Result.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Types/Matrix.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Types/Matrix.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Types/Vector.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Types/Vector.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/Visitor.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/Visitor.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/files/input.txt" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/files/input.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/Grammar.tokens" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/Grammar.tokens" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarBaseListener.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarBaseListener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarBaseVisitor.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarBaseVisitor.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarLexer.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarLexer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarLexer.tokens" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarLexer.tokens" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarListener.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarListener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$AddFuncContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$AddFuncContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$AssignmentContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$AssignmentContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$BlockNonReturnContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$BlockNonReturnContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$BlockReturnContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$BlockReturnContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$CompareContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$CompareContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$CompareExprContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$CompareExprContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$CompareOpContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$CompareOpContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ContentContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ContentContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$DeclarationContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$DeclarationContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ElseBlockContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ElseBlockContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ExpressionContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ForBlockContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ForBlockContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$FunctionCallContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$FunctionCallContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$FunctionNonReturnContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$FunctionNonReturnContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$FunctionReturnContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$FunctionReturnContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$GetFuncContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$GetFuncContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$IfBlockContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$IfBlockContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$InputSignatureContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$InputSignatureContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$LengthFuncContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$LengthFuncContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$MatrixAssignmentContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$MatrixAssignmentContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$RemoveFuncContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$RemoveFuncContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$SetContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$SetContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$ShowFuncContext.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$SignatureFunctionContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$SignatureFunctionContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$TypeContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$TypeContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$VectorAssignmentContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$VectorAssignmentContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$WhileBlockContext.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser$WhileBlockContext.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarParser.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarVisitor.class" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/gen/GrammarVisitor.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/src/Grammar.g4" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/src/Grammar.g4" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/src/gen/Grammar.tokens" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/src/gen/Grammar.tokens" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatVecCompiler/src/gen/GrammarLexer.tokens" afterPath="$PROJECT_DIR$/out/production/MatVecCompiler/src/gen/GrammarLexer.tokens" />
-      <change beforePath="$PROJECT_DIR$/src/Grammar.g4" afterPath="$PROJECT_DIR$/src/Grammar.g4" />
-      <change beforePath="$PROJECT_DIR$/src/Types/Matrix.java" afterPath="$PROJECT_DIR$/src/Types/Matrix.java" />
-      <change beforePath="$PROJECT_DIR$/src/Types/Vector.java" afterPath="$PROJECT_DIR$/src/Types/Vector.java" />
       <change beforePath="$PROJECT_DIR$/src/Visitor.java" afterPath="$PROJECT_DIR$/src/Visitor.java" />
-      <change beforePath="$PROJECT_DIR$/src/gen/Grammar.tokens" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarBaseListener.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarBaseVisitor.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarLexer.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarLexer.tokens" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarListener.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarParser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gen/GrammarVisitor.java" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Visitor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Visitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Visitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3106">
-              <caret line="445" column="42" lean-forward="false" selection-start-line="445" selection-start-column="42" selection-end-line="445" selection-end-column="42" />
+            <state relative-caret-position="118">
+              <caret line="336" column="66" lean-forward="false" selection-start-line="336" selection-start-column="66" selection-end-line="336" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Result.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java_out/Result.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="160">
+              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,7 +48,7 @@
       <file leaf-file-name="Vector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Types/Vector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="-60">
               <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="35" />
               <folding />
             </state>
@@ -110,8 +58,8 @@
       <file leaf-file-name="Grammar.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grammar.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+            <state relative-caret-position="140">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -163,6 +111,10 @@
       <find>return</find>
       <find>Arrays.asList</find>
       <find>asList</find>
+      <find>Length</find>
+      <find>visitLengthFunc</find>
+      <find>for</find>
+      <find>visitfor</find>
     </findStrings>
     <replaceStrings>
       <replace>C_BRACKET</replace>
@@ -204,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/Types/Vector.java" />
         <option value="$PROJECT_DIR$/src/Types/Matrix.java" />
         <option value="$PROJECT_DIR$/src/Grammar.g4" />
-        <option value="$PROJECT_DIR$/java_out/Result.java" />
         <option value="$PROJECT_DIR$/src/Visitor.java" />
+        <option value="$PROJECT_DIR$/java_out/Result.java" />
       </list>
     </option>
   </component>
@@ -292,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Result">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -454,8 +406,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Result" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Result" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
         <item index="2" class="java.lang.String" itemvalue="Application.ArrayInit" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayInitTest.shouldAnswerWithTrue" />
       </list>
@@ -703,16 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Variables.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -729,36 +671,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Types/Vector.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grammar.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java_out/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="264">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Types/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3106">
-          <caret line="445" column="42" lean-forward="false" selection-start-line="445" selection-start-column="42" selection-end-line="445" selection-end-column="42" />
+        <state relative-caret-position="118">
+          <caret line="336" column="66" lean-forward="false" selection-start-line="336" selection-start-column="66" selection-end-line="336" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grammar.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_out/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

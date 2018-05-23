@@ -12,7 +12,20 @@ public class Result {
     }
     private void start() throws Exception
 {
-Vector f = new Vector(Arrays.asList(1, 2, 3));
+Matrix a = new Matrix(new int[][]{{1, 1, 1}, {1, 1, 1}});
+Matrix b = new Matrix(new int[][]{{1, 0, 1}, {2, 3, 4}});
+Matrix c = calc(a,b);
+c.print();
+}
+
+private Matrix calc(Matrix matr1, Matrix matr2)throws Exception{
+Matrix matr = new Matrix();
+if(matr2.get(1,1)>2){
+matr = matr1.plus(matr2);
+}else{
+matr = matr1.mult(2);
+}
+return matr;
 }
 
 public class Matrix {

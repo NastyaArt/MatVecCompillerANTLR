@@ -183,8 +183,6 @@ public class Visitor extends GrammarBaseVisitor<String> {
 
     @Override
     public String visitNcolFunc(GrammarParser.NcolFuncContext ctx) {
-        errors.add(ctx.NAME().getText());
-        errors.add(variables.get(ctx.NAME().getText()));
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -337,7 +335,13 @@ public class Visitor extends GrammarBaseVisitor<String> {
 
     @Override
     public String visitCompare(GrammarParser.CompareContext ctx) {
-        return  ctx.getText();
+        if(ctx.compareOp(0).getText() == null)
+            errors.add("Error: cant find " + ctx.compareOp(0).getText());
+        visitCompareOp(ctx.compareOp(0));
+        if(ctx.compareOp(1).getText() == null)
+            errors.add("Error: cant find " + ctx.compareOp(1).getText());
+        visitCompareOp(ctx.compareOp(1));
+        return ctx.getText();
     }
 
     @Override
@@ -370,7 +374,7 @@ public class Visitor extends GrammarBaseVisitor<String> {
         String buffer = "";
         if(ctx.compareOp(0).getText() == null)
             errors.add("Error: cant find " + ctx.compareOp(0).getText());
-        buffer += "for(int index = 0; index < " + ctx.compareOp(0).getText();
+        buffer += "for(int index = 0; index < " + visitCompareOp(ctx.compareOp(0));
         if(ctx.compareOp(1 ) != null)
         {
             if(ctx.PLUS() != null)
@@ -390,6 +394,10 @@ public class Visitor extends GrammarBaseVisitor<String> {
             return visitGetFunc(ctx.getFunc());
         if(ctx.lengthFunc() != null)
             return visitLengthFunc(ctx.lengthFunc());
+        if(ctx.nrowFunc() != null)
+            return visitNrowFunc(ctx.nrowFunc());
+        if(ctx.ncolFunc() != null)
+            return visitNcolFunc((ctx.ncolFunc()));
         return ctx.getChild(0).getText();
     }
 
