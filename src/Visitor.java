@@ -7,7 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MatVecVisitor extends GrammarBaseVisitor<String> {
+public class Visitor extends GrammarBaseVisitor<String> {
+
     List<String> errors = new ArrayList<>();
     Variables variables = new Variables();
     Map<String, String> functions = new HashMap<>();
@@ -136,12 +137,12 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
                 errors.add("Error: variable " + ctx.NAME().getText() + " already used");
             }
         } else {
-            if(ctx.type().MATRIX() != null && ctx.type().getText().equals("Matrix"))
+            if(ctx.type().MATRIX() != null && ctx.type().getText().equals("matrix"))
             {
                 variables.put(ctx.NAME().getText(), "matrix");
                 buffer += "Matrix ";
             }
-            else if(ctx.type().VECTOR() != null && ctx.type().getText().equals("Vector")){
+            else if(ctx.type().VECTOR() != null && ctx.type().getText().equals("vector")){
                 variables.put(ctx.NAME().getText(), "vector");
                 buffer += "Vector ";
             }
@@ -153,7 +154,7 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
     }
 
     @Override
-    public String visitShowFunct(GrammarParser.ShowFunctContext ctx) {
+    public String visitShowFunc(GrammarParser.ShowFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -161,7 +162,7 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
     }
 
     @Override
-    public String visitGetFunct(GrammarParser.GetFunctContext ctx) {
+    public String visitGetFunc(GrammarParser.GetFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -169,7 +170,7 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
     }
 
     @Override
-    public String visitLengthFunct(GrammarParser.LengthFunctContext ctx) {
+    public String visitLengthFunc(GrammarParser.LengthFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -177,7 +178,7 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
     }
 
     @Override
-    public String visitAddFunct(GrammarParser.AddFunctContext ctx) {
+    public String visitAddFunc(GrammarParser.AddFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -185,7 +186,7 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
     }
 
     @Override
-    public String visitRemoveFunct(GrammarParser.RemoveFunctContext ctx) {
+    public String visitRemoveFunc(GrammarParser.RemoveFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
             errors.add("Can't find variable " + ctx.NAME().getText());
         }
@@ -215,8 +216,8 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
             return "Matrix";
         if (ctx.VECTOR() != null)
             return "Vector";
-        if((ctx.MATRIX() != null && !ctx.MATRIX().getText().equals("Matrix"))
-                || (ctx.VECTOR() != null && !ctx.VECTOR().getText().equals("Vector")))
+        if((ctx.MATRIX() != null && !ctx.MATRIX().getText().equals("matrix"))
+                || (ctx.VECTOR() != null && !ctx.VECTOR().getText().equals("vector")))
             errors.add("Error: unknown type of variable");
         return "";
     }
@@ -355,10 +356,10 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
 
     @Override
     public String visitCompareOp(GrammarParser.CompareOpContext ctx) {
-        if(ctx.getFunct() != null)
-            return visitGetFunct(ctx.getFunct());
-        if(ctx.lengthFunct() != null)
-            return visitLengthFunct(ctx.lengthFunct());
+        if(ctx.getFunc() != null)
+            return visitGetFunc(ctx.getFunc());
+        if(ctx.lengthFunc() != null)
+            return visitLengthFunc(ctx.lengthFunc());
         return ctx.getChild(0).getText();
     }
 
@@ -398,12 +399,12 @@ public class MatVecVisitor extends GrammarBaseVisitor<String> {
             return visitIfBlock(ctx.ifBlock());
         else if (ctx.assignment() != null)
             return visitAssignment(ctx.assignment());
-        else if (ctx.showFunct() != null)
-            return visitShowFunct(ctx.showFunct());
-        else if (ctx.addFunct() != null)
-            return visitAddFunct(ctx.addFunct());
-        else if (ctx.removeFunct() != null)
-            return visitRemoveFunct(ctx.removeFunct());
+        else if (ctx.showFunc() != null)
+            return visitShowFunc(ctx.showFunc());
+        else if (ctx.addFunc() != null)
+            return visitAddFunc(ctx.addFunc());
+        else if (ctx.removeFunc() != null)
+            return visitRemoveFunc(ctx.removeFunc());
         else if (ctx.forBlock() != null)
             return visitForBlock(ctx.forBlock());
         else return "";

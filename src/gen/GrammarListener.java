@@ -1,5 +1,4 @@
-// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
-package gen;
+package gen;// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -78,55 +77,55 @@ public interface GrammarListener extends ParseTreeListener {
 	 */
 	void exitAssignment(GrammarParser.AssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GrammarParser#showFunct}.
+	 * Enter a parse tree produced by {@link GrammarParser#showFunc}.
 	 * @param ctx the parse tree
 	 */
-	void enterShowFunct(GrammarParser.ShowFunctContext ctx);
+	void enterShowFunc(GrammarParser.ShowFuncContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GrammarParser#showFunct}.
+	 * Exit a parse tree produced by {@link GrammarParser#showFunc}.
 	 * @param ctx the parse tree
 	 */
-	void exitShowFunct(GrammarParser.ShowFunctContext ctx);
+	void exitShowFunc(GrammarParser.ShowFuncContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GrammarParser#getFunct}.
+	 * Enter a parse tree produced by {@link GrammarParser#getFunc}.
 	 * @param ctx the parse tree
 	 */
-	void enterGetFunct(GrammarParser.GetFunctContext ctx);
+	void enterGetFunc(GrammarParser.GetFuncContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GrammarParser#getFunct}.
+	 * Exit a parse tree produced by {@link GrammarParser#getFunc}.
 	 * @param ctx the parse tree
 	 */
-	void exitGetFunct(GrammarParser.GetFunctContext ctx);
+	void exitGetFunc(GrammarParser.GetFuncContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GrammarParser#lengthFunct}.
+	 * Enter a parse tree produced by {@link GrammarParser#lengthFunc}.
 	 * @param ctx the parse tree
 	 */
-	void enterLengthFunct(GrammarParser.LengthFunctContext ctx);
+	void enterLengthFunc(GrammarParser.LengthFuncContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GrammarParser#lengthFunct}.
+	 * Exit a parse tree produced by {@link GrammarParser#lengthFunc}.
 	 * @param ctx the parse tree
 	 */
-	void exitLengthFunct(GrammarParser.LengthFunctContext ctx);
+	void exitLengthFunc(GrammarParser.LengthFuncContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GrammarParser#addFunct}.
+	 * Enter a parse tree produced by {@link GrammarParser#addFunc}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddFunct(GrammarParser.AddFunctContext ctx);
+	void enterAddFunc(GrammarParser.AddFuncContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GrammarParser#addFunct}.
+	 * Exit a parse tree produced by {@link GrammarParser#addFunc}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddFunct(GrammarParser.AddFunctContext ctx);
+	void exitAddFunc(GrammarParser.AddFuncContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link GrammarParser#removeFunct}.
+	 * Enter a parse tree produced by {@link GrammarParser#removeFunc}.
 	 * @param ctx the parse tree
 	 */
-	void enterRemoveFunct(GrammarParser.RemoveFunctContext ctx);
+	void enterRemoveFunc(GrammarParser.RemoveFuncContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link GrammarParser#removeFunct}.
+	 * Exit a parse tree produced by {@link GrammarParser#removeFunc}.
 	 * @param ctx the parse tree
 	 */
-	void exitRemoveFunct(GrammarParser.RemoveFunctContext ctx);
+	void exitRemoveFunc(GrammarParser.RemoveFuncContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GrammarParser#inputSignature}.
 	 * @param ctx the parse tree

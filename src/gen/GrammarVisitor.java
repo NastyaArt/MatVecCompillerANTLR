@@ -1,5 +1,4 @@
-// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
-package gen;
+package gen;// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -53,35 +52,35 @@ public interface GrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssignment(GrammarParser.AssignmentContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrammarParser#showFunct}.
+	 * Visit a parse tree produced by {@link GrammarParser#showFunc}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitShowFunct(GrammarParser.ShowFunctContext ctx);
+	T visitShowFunc(GrammarParser.ShowFuncContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrammarParser#getFunct}.
+	 * Visit a parse tree produced by {@link GrammarParser#getFunc}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitGetFunct(GrammarParser.GetFunctContext ctx);
+	T visitGetFunc(GrammarParser.GetFuncContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrammarParser#lengthFunct}.
+	 * Visit a parse tree produced by {@link GrammarParser#lengthFunc}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLengthFunct(GrammarParser.LengthFunctContext ctx);
+	T visitLengthFunc(GrammarParser.LengthFuncContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrammarParser#addFunct}.
+	 * Visit a parse tree produced by {@link GrammarParser#addFunc}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAddFunct(GrammarParser.AddFunctContext ctx);
+	T visitAddFunc(GrammarParser.AddFuncContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrammarParser#removeFunct}.
+	 * Visit a parse tree produced by {@link GrammarParser#removeFunc}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRemoveFunct(GrammarParser.RemoveFunctContext ctx);
+	T visitRemoveFunc(GrammarParser.RemoveFuncContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GrammarParser#inputSignature}.
 	 * @param ctx the parse tree

@@ -1,5 +1,5 @@
-// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
-package gen;
+package gen;// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
+
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -99,61 +99,61 @@ public class GrammarBaseListener implements GrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterShowFunct(GrammarParser.ShowFunctContext ctx) { }
+	@Override public void enterShowFunc(GrammarParser.ShowFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitShowFunct(GrammarParser.ShowFunctContext ctx) { }
+	@Override public void exitShowFunc(GrammarParser.ShowFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGetFunct(GrammarParser.GetFunctContext ctx) { }
+	@Override public void enterGetFunc(GrammarParser.GetFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitGetFunct(GrammarParser.GetFunctContext ctx) { }
+	@Override public void exitGetFunc(GrammarParser.GetFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLengthFunct(GrammarParser.LengthFunctContext ctx) { }
+	@Override public void enterLengthFunc(GrammarParser.LengthFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLengthFunct(GrammarParser.LengthFunctContext ctx) { }
+	@Override public void exitLengthFunc(GrammarParser.LengthFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddFunct(GrammarParser.AddFunctContext ctx) { }
+	@Override public void enterAddFunc(GrammarParser.AddFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAddFunct(GrammarParser.AddFunctContext ctx) { }
+	@Override public void exitAddFunc(GrammarParser.AddFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRemoveFunct(GrammarParser.RemoveFunctContext ctx) { }
+	@Override public void enterRemoveFunc(GrammarParser.RemoveFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRemoveFunct(GrammarParser.RemoveFunctContext ctx) { }
+	@Override public void exitRemoveFunc(GrammarParser.RemoveFuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

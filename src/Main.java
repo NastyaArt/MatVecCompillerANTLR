@@ -1,32 +1,30 @@
 import gen.GrammarLexer;
 import gen.GrammarParser;
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.tree.*;
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            ANTLRInputStream input = new ANTLRInputStream(
-                    new FileInputStream("files/input.txt"));
 
+            ANTLRInputStream input = new ANTLRFileStream("files/input.txt");
+//            ANTLRInputStream input = new ANTLRFileStream(args[0]);
             GrammarLexer lexer = new GrammarLexer(input);
             GrammarParser parser = new GrammarParser(new CommonTokenStream(lexer));
             ParseTree tree = parser.program();
-            MatVecVisitor visitor = new MatVecVisitor();
+            Visitor visitor = new Visitor();
             String output = visitor.visit(tree);
 
-            File file= new File ( "java_out/Result.java");
-            if (!file.exists())
-                file.createNewFile();
-
-            FileWriter writer = new FileWriter(file, false);
-            writer.write(output);
-            writer.close();
-
+            FileWriter fileWriter = new FileWriter("java_out/Result.java");
+            fileWriter.write(output);
+            fileWriter.close();
         } catch (IOException e) {
-        e.printStackTrace();
+            e.printStackTrace();
         }
     }
 }

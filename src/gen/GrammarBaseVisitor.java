@@ -1,5 +1,4 @@
-// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
-package gen;
+package gen;// Generated from D:/Nastya/Java/MatVecCompiler/src\Grammar.g4 by ANTLR 4.7
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -66,35 +65,35 @@ public class GrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implement
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitShowFunct(GrammarParser.ShowFunctContext ctx) { return visitChildren(ctx); }
+	@Override public T visitShowFunc(GrammarParser.ShowFuncContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitGetFunct(GrammarParser.GetFunctContext ctx) { return visitChildren(ctx); }
+	@Override public T visitGetFunc(GrammarParser.GetFuncContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLengthFunct(GrammarParser.LengthFunctContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLengthFunc(GrammarParser.LengthFuncContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAddFunct(GrammarParser.AddFunctContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAddFunc(GrammarParser.AddFuncContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRemoveFunct(GrammarParser.RemoveFunctContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRemoveFunc(GrammarParser.RemoveFuncContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

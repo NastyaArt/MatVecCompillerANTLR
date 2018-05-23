@@ -13,18 +13,28 @@ public class Result {
 {
 Matrix a = new Matrix(new int[][]{{1, 1, 1}, {1, 1, 1}});
 Matrix b = new Matrix(new int[][]{{1, 0, 1}, {2, 3, 4}});
+Matrix c = calc(a,b);
+c.show();
+vectr();
+}
 
+private Matrix calc(Matrix matr1, Matrix matr2)throws Exception{
+Matrix matr = new Matrix();
+if(matr2.get(1,1)>2){
+matr = matr1.plus(matr2);
+}else{
+matr = matr1.mult(2);
+}
+return matr;
+}
 
-show();
-
-
-show();
+private void vectr() throws Exception{
 Vector vect = new Vector();
-while(vect.;
-length();
-
-
-add();
+while(vect.length()!=5){
+vect.add(1);
+}
+vect.show();
+return;
 }
 
 public class Matrix {
