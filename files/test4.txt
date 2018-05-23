@@ -1,0 +1,13 @@
+main {
+vector v;
+
+while(v.length() != 8){
+	v.add(2);
+	v.add(1);
+}
+v.print();
+
+v.remove(4);
+
+v.print();
+}

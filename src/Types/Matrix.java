@@ -40,6 +40,11 @@ public class Matrix {
         return array[r][c];
     }
 
+    public void set(int r, int c, int v)
+    {
+        array[r][c] = v;
+    }
+
     public int nrow()
     {
         return rows;
@@ -60,7 +65,14 @@ public class Matrix {
                 matr.array[i][j] = this.array[i][j] + matr2.array[i][j];
         return matr;
     }
-
+    public Matrix plus(int x)
+    {
+        Matrix matr = new Matrix(rows,columns);
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
+                matr.array[i][j] = this.array[i][j] + x;
+        return matr;
+    }
     public Matrix minus(Matrix matr2)
     {
         if (this.rows != matr2.rows || this.columns != matr2.columns)
@@ -71,7 +83,14 @@ public class Matrix {
                 matr.array[i][j] = this.array[i][j] - matr2.array[i][j];
         return matr;
     }
-
+    public Matrix minus(int x)
+    {
+        Matrix matr = new Matrix(rows,columns);
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
+                matr.array[i][j] = this.array[i][j] - x;
+        return matr;
+    }
     public Matrix mult(Matrix matr2)
     {
         if (this.columns != matr2.rows)

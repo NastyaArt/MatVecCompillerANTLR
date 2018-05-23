@@ -12,20 +12,10 @@ public class Result {
     }
     private void start() throws Exception
 {
-Matrix a = new Matrix(new int[][]{{1, 1, 1}, {1, 1, 1}});
-Matrix b = new Matrix(new int[][]{{1, 0, 1}, {2, 3, 4}});
-Matrix c = calc(a,b);
-c.print();
-}
+Vector a = new Vector();
 
-private Matrix calc(Matrix matr1, Matrix matr2)throws Exception{
-Matrix matr = new Matrix();
-if(matr2.get(1,1)>2){
-matr = matr1.plus(matr2);
-}else{
-matr = matr1.mult(2);
-}
-return matr;
+a = a.plus(2);
+a.print();
 }
 
 public class Matrix {
@@ -68,11 +58,19 @@ public class Matrix {
         return array[r][c];
     }
 
-    public int length()
+    public void set(int r, int c, int v)
     {
-        return rows * columns;
+        array[r][c] = v;
+    }
+    public int nrow()
+    {
+        return rows;
     }
 
+    public int ncol()
+    {
+        return columns;
+    }
     public Matrix plus(Matrix matr2)
     {
         if (this.rows != matr2.rows || this.columns != matr2.columns)
@@ -84,6 +82,14 @@ public class Matrix {
         return matr;
     }
 
+public Matrix plus(int x)
+    {
+        Matrix matr = new Matrix(rows,columns);
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
+                matr.array[i][j] = this.array[i][j] + x;
+        return matr;
+    }
     public Matrix minus(Matrix matr2)
     {
         if (this.rows != matr2.rows || this.columns != matr2.columns)
@@ -95,8 +101,16 @@ public class Matrix {
         return matr;
     }
 
-    public Matrix mult(Matrix matr2)
+    public Matrix minus(int x)
     {
+        Matrix matr = new Matrix(rows,columns);
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
+                matr.array[i][j] = this.array[i][j] - x;
+        return matr;
+    }    public Matrix mult(Matrix matr2)
+    {
+
         if (this.columns != matr2.rows)
             throw new RuntimeException("Check matrix size.");
         Matrix matr = new Matrix(this.rows,matr2.columns);
@@ -175,6 +189,13 @@ public class Vector {
         return vect;
     }
 
+public Vector plus(int x)
+    {
+        Vector vect = new Vector(array.size());
+        for (int i = 0; i < vect.length(); i++)
+            vect.array.set(i, array.get(i) + x);
+        return vect;
+    }
     public Vector minus(Vector vect2)
     {
         if (this.array.size() != vect2.array.size())
@@ -185,6 +206,13 @@ public class Vector {
         return vect;
     }
 
+public Vector minus(int x)
+    {
+        Vector vect = new Vector(array.size());
+        for (int i = 0; i < vect.length(); i++)
+            vect.array.set(i, array.get(i) - x);
+        return vect;
+    }
     public int mult(Vector vect2)
     {
         if (this.array.size() != vect2.array.size())

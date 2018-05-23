@@ -48,9 +48,9 @@ public class Visitor extends GrammarBaseVisitor<String> {
         String buffer = "";
         if (variables.get(ctx.NAME().getText()) != null) {
             if (!variables.get(ctx.NAME().getText()).equalsIgnoreCase("matrix")) {
-                errors.add("Error: variable " + ctx.NAME().getText() + " is not a matrix");
+                errors.add("Error: variable " + ctx.NAME().getText() + " was already initialise");
             }else if (!variables.get(ctx.NAME().getText()).equalsIgnoreCase("vector")) {
-                errors.add("Error: variable " + ctx.NAME().getText() + " is not a vector");
+                errors.add("Error: variable " + ctx.NAME().getText() + " was already initialise");
             }
         } else {
             if(ctx.type().MATRIX() != null)
@@ -77,6 +77,12 @@ public class Visitor extends GrammarBaseVisitor<String> {
         return buffer;
     }
 
+    @Override
+    public String visitIntAssignment(GrammarParser.IntAssignmentContext ctx) {
+        String buffer = "";
+        buffer = "int " + ctx.NAME().toString() + "=" + ctx.NUMBER().toString() + ";";
+        return buffer;
+    }
     @Override
     public String visitVectorAssignment(GrammarParser.VectorAssignmentContext ctx) {
         String buffer = "";
@@ -163,12 +169,19 @@ public class Visitor extends GrammarBaseVisitor<String> {
 
     @Override
     public String visitGetFunc(GrammarParser.GetFuncContext ctx) {
-        if (variables.get(ctx.NAME().getText()) == null) {
-            errors.add("Can't find variable " + ctx.NAME().getText());
+        if (variables.get(ctx.NAME(0).getText()) == null) {
+            errors.add("Can't find variable " + ctx.NAME(0).getText());
         }
         return ctx.getText();
     }
 
+    @Override
+    public String visitSetFunc(GrammarParser.SetFuncContext ctx) {
+        if (variables.get(ctx.NAME(0).getText()) == null) {
+            errors.add("Can't find variable " + ctx.NAME(0).getText());
+        }
+        return ctx.getText();
+    }
     @Override
     public String visitLengthFunc(GrammarParser.LengthFuncContext ctx) {
         if (variables.get(ctx.NAME().getText()) == null) {
@@ -372,21 +385,13 @@ public class Visitor extends GrammarBaseVisitor<String> {
     @Override
     public String visitForBlock(GrammarParser.ForBlockContext ctx) {
         String buffer = "";
-        if(ctx.compareOp(0).getText() == null)
-            errors.add("Error: cant find " + ctx.compareOp(0).getText());
-        buffer += "for(int index = 0; index < " + visitCompareOp(ctx.compareOp(0));
-        if(ctx.compareOp(1 ) != null)
-        {
-            if(ctx.PLUS() != null)
-                buffer += "+" + ctx.compareOp(1).getText();
-            if(ctx.MINUS() != null)
-                buffer += "-" + ctx.compareOp(1).getText();
-            if(ctx.MULTIPLY() != null)
-                buffer += "*" + ctx.compareOp(1).getText();
-        }
-        buffer += "; index++)" + visitBlock(ctx.block());
+        if(ctx.compare().getText() == null)
+            errors.add("Error: cant find " + ctx.compare().getText());
+        buffer += "for(" + visitIntAssignment(ctx.intAssignment()) + visitCompare(ctx.compare()) +
+                "; " + ctx.NAME().getText() + "=" + ctx.intOperation().getText() + ")";
+        buffer += visitBlock(ctx.block());
         return buffer;
-    }
+}
 
     @Override
     public String visitCompareOp(GrammarParser.CompareOpContext ctx) {
@@ -445,6 +450,8 @@ public class Visitor extends GrammarBaseVisitor<String> {
             return visitRemoveFunc(ctx.removeFunc());
         else if (ctx.forBlock() != null)
             return visitForBlock(ctx.forBlock());
+        else if (ctx.setFunc() != null)
+            return visitSetFunc(ctx.setFunc());
         else return "";
     }
 
@@ -502,10 +509,20 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "        return array[r][c];\n" +
             "    }\n" +
             "\n" +
-            "    public int length()\n" +
+            "    public void set(int r, int c, int v)\n" +
             "    {\n" +
-            "        return rows * columns;\n" +
+            "        array[r][c] = v;\n" +
+            "    }" +
+            "\n" +
+            "    public int nrow()\n" +
+            "    {\n" +
+            "        return rows;\n" +
             "    }\n" +
+            "\n" +
+            "    public int ncol()\n" +
+            "    {\n" +
+            "        return columns;\n" +
+            "    }" +
             "\n" +
             "    public Matrix plus(Matrix matr2)\n" +
             "    {\n" +
@@ -518,6 +535,15 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "        return matr;\n" +
             "    }\n" +
             "\n" +
+            "public Matrix plus(int x)\n" +
+            "    {\n" +
+            "        Matrix matr = new Matrix(rows,columns);\n" +
+            "        for (int i = 0; i < rows; i++)\n" +
+            "            for (int j = 0; j < columns; j++)\n" +
+            "                matr.array[i][j] = this.array[i][j] + x;\n" +
+            "        return matr;\n" +
+            "    }" +
+            "\n" +
             "    public Matrix minus(Matrix matr2)\n" +
             "    {\n" +
             "        if (this.rows != matr2.rows || this.columns != matr2.columns)\n" +
@@ -529,8 +555,17 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "        return matr;\n" +
             "    }\n" +
             "\n" +
+            "    public Matrix minus(int x)\n" +
+            "    {\n" +
+            "        Matrix matr = new Matrix(rows,columns);\n" +
+            "        for (int i = 0; i < rows; i++)\n" +
+            "            for (int j = 0; j < columns; j++)\n" +
+            "                matr.array[i][j] = this.array[i][j] - x;\n" +
+            "        return matr;\n" +
+            "    }" +
             "    public Matrix mult(Matrix matr2)\n" +
             "    {\n" +
+            "\n" +
             "        if (this.columns != matr2.rows)\n" +
             "            throw new RuntimeException(\"Check matrix size.\");\n" +
             "        Matrix matr = new Matrix(this.rows,matr2.columns);\n" +
@@ -609,6 +644,14 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "        return vect;\n" +
             "    }\n" +
             "\n" +
+            "public Vector plus(int x)\n" +
+            "    {\n" +
+            "        Vector vect = new Vector(array.size());\n" +
+            "        for (int i = 0; i < vect.length(); i++)\n" +
+            "            vect.array.set(i, array.get(i) + x);\n" +
+            "        return vect;\n" +
+            "    }" +
+            "\n" +
             "    public Vector minus(Vector vect2)\n" +
             "    {\n" +
             "        if (this.array.size() != vect2.array.size())\n" +
@@ -618,6 +661,14 @@ public class Visitor extends GrammarBaseVisitor<String> {
             "            vect.array.set(i, array.get(i) - vect2.array.get(i));\n" +
             "        return vect;\n" +
             "    }\n" +
+            "\n" +
+            "public Vector minus(int x)\n" +
+            "    {\n" +
+            "        Vector vect = new Vector(array.size());\n" +
+            "        for (int i = 0; i < vect.length(); i++)\n" +
+            "            vect.array.set(i, array.get(i) - x);\n" +
+            "        return vect;\n" +
+            "    }" +
             "\n" +
             "    public int mult(Vector vect2)\n" +
             "    {\n" +

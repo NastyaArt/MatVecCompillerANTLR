@@ -1,0 +1,13 @@
+main {
+matrix a = {{1,2,3},{4,2,1}};
+matrix b = {{9,9,9},{9,9,9}};
+
+for (int k = 0; k < a.nrow(); k = k + 1){
+	for (int i = 0; i < a.ncol(); i = i + 1){
+	b = b - 1;
+	a.set(k, i, a.get(k,i) * 2);
+	}
+}
+a.print();
+b.print();
+}

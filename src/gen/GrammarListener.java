@@ -47,6 +47,16 @@ public interface GrammarListener extends ParseTreeListener {
 	 */
 	void exitSet(GrammarParser.SetContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link GrammarParser#intAssignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterIntAssignment(GrammarParser.IntAssignmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#intAssignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitIntAssignment(GrammarParser.IntAssignmentContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link GrammarParser#vectorAssignment}.
 	 * @param ctx the parse tree
 	 */
@@ -96,6 +106,16 @@ public interface GrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitGetFunc(GrammarParser.GetFuncContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GrammarParser#setFunc}.
+	 * @param ctx the parse tree
+	 */
+	void enterSetFunc(GrammarParser.SetFuncContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#setFunc}.
+	 * @param ctx the parse tree
+	 */
+	void exitSetFunc(GrammarParser.SetFuncContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GrammarParser#lengthFunc}.
 	 * @param ctx the parse tree
@@ -296,6 +316,16 @@ public interface GrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitForBlock(GrammarParser.ForBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GrammarParser#intOperation}.
+	 * @param ctx the parse tree
+	 */
+	void enterIntOperation(GrammarParser.IntOperationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#intOperation}.
+	 * @param ctx the parse tree
+	 */
+	void exitIntOperation(GrammarParser.IntOperationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GrammarParser#expression}.
 	 * @param ctx the parse tree

@@ -1,0 +1,9 @@
+main{
+some();
+doelse();
+}
+
+func some(){
+m.print();
+return;
+}

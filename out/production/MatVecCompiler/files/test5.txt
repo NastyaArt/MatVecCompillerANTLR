@@ -1,0 +1,8 @@
+main{
+vector a;
+matrix a;
+
+a = a + 2;
+
+a.print();
+}

@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         try {
 
-            ANTLRInputStream input = new ANTLRFileStream("files/input.txt");
+            ANTLRInputStream input = new ANTLRFileStream("files/test6.txt");
 //            ANTLRInputStream input = new ANTLRFileStream(args[0]);
             GrammarLexer lexer = new GrammarLexer(input);
             GrammarParser parser = new GrammarParser(new CommonTokenStream(lexer));

@@ -34,6 +34,12 @@ public interface GrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitSet(GrammarParser.SetContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link GrammarParser#intAssignment}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntAssignment(GrammarParser.IntAssignmentContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link GrammarParser#vectorAssignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -63,6 +69,12 @@ public interface GrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitGetFunc(GrammarParser.GetFuncContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrammarParser#setFunc}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSetFunc(GrammarParser.SetFuncContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GrammarParser#lengthFunc}.
 	 * @param ctx the parse tree
@@ -183,6 +195,12 @@ public interface GrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitForBlock(GrammarParser.ForBlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrammarParser#intOperation}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntOperation(GrammarParser.IntOperationContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link GrammarParser#expression}.
 	 * @param ctx the parse tree

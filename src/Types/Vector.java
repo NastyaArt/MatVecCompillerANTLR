@@ -59,6 +59,14 @@ public class Vector {
         return vect;
     }
 
+    public Vector plus(int x)
+    {
+        Vector vect = new Vector(array.size());
+        for (int i = 0; i < vect.length(); i++)
+            vect.array.set(i, array.get(i) + x);
+        return vect;
+    }
+
     public Vector minus(Vector vect2)
     {
         if (this.array.size() != vect2.array.size())
@@ -66,6 +74,14 @@ public class Vector {
         Vector vect = new Vector(array.size());
         for (int i = 0; i < vect.length(); i++)
             vect.array.set(i, array.get(i) - vect2.array.get(i));
+        return vect;
+    }
+
+    public Vector minus(int x)
+    {
+        Vector vect = new Vector(array.size());
+        for (int i = 0; i < vect.length(); i++)
+            vect.array.set(i, array.get(i) - x);
         return vect;
     }
 

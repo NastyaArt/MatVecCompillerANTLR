@@ -1,0 +1,20 @@
+main {
+matrix a = {{1,1,1},{7,7,7}};
+matrix b = {{4,4,4},{1,1,1}};
+
+matrix c = dosmth(a, b);
+matrix d = dosmth(b, a);
+c.print();
+d.print();
+}
+
+func matrix dosmth(matrix m1, matrix m2){
+matrix m;
+if(m2.get(0,0) < 3){
+	m = m1 + m2;
+}
+else{
+	m = m1 * 2;	
+}
+return m;
+}

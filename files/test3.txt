@@ -1,0 +1,13 @@
+main {
+vector f = {1,2,3};
+matrix a = {{1,1,1},{1,1,1}};
+while(a.length() > 0){
+	a.print();
+}
+for(int k = 0; k < f.nrow(); k = k + 1){
+	f.print();
+}
+for(int k = 0; k < f.ncol(); k = k + 1){
+	f.print();
+}
+}
